@@ -122,6 +122,7 @@ table{
       width: 80%;
       margin: auto;
       margin-top: 20px;
+      overflow: hidden;
       color: white;
 }
 thead tr th{
