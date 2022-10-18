@@ -1,0 +1,343 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+body{
+      font-family: sans-serif;
+}
+nav{
+      width: 100%;
+      line-height: 70px;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      position: fixed;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: atasKeBawah 2s ease-in-out;
+}
+nav a{
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 15px;
+      color: white;
+      transition: .5s ease;
+}
+nav a:hover{
+      background-color: white;
+      color: black;
+      padding: 2px 5px;
+      border-radius: 2px;
+}
+#index, 
+#contact, 
+#aboutMe{
+      padding-top: 70px;
+      width: 100%;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+}
+#index::before,
+#contact::before,
+#aboutMe::before{
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      background-color: pink;
+      animation: animasi1 20s infinite;
+}
+#index::after,
+#contact::after,
+#aboutMe::after{
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+      background-color: gold;
+      animation: animasi2 20s infinite;
+      
+}
+#contact::before{
+      background-color: gold;
+}
+#contact::after{
+      background-color: pink;
+}
+footer{
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      text-align: center;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      animation: bawahKeAtas 2s ease-in-out;
+}
+
+/* index START */
+#index{
+      text-align: center;
+}
+.foto-profile{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 20px 0;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+      animation: atasKeBawah 1s ease-out;
+}
+.nama{
+      font-size: 25px;
+      color: white;
+      animation: atasKeBawah 1.5s;
+}
+.sekolah{
+      font-size: 15px;
+      color: #eaeaea;
+      animation: atasKeBawah 1.5s;
+}
+.overview{
+      margin: 20px 0 5px 0;
+}
+.title-overview{
+      color: white;
+      opacity: 0;
+      transition: .3s ease-in;
+}
+.deskripsi-overview{
+      color: #ddd;
+}
+.overview:hover .title-overview{
+      opacity: 1;
+}
+table{
+      width: 80%;
+      margin: auto;
+      margin-top: 20px;
+      color: white;
+}
+thead tr th{
+      background-color: rgb(250, 155, 171);
+      opacity: 0.3;
+      font-size: 20px;
+      padding: 10px;
+      transition: 0.2s ease-in-out;
+      animation: kananKeKiri 2s ease-in-out;
+}
+tbody tr td{
+      font-size: 16px;
+      background-color: gold;
+      opacity: 0.5;
+      width: 50%;
+      padding: 5px;
+      transition: 0.2s ease-in-out;
+      animation: kiriKeKanan 2s ease-in-out;
+}
+ul li{
+      list-style-type: none;
+      margin: 4px 0;
+}
+thead tr th:hover, 
+tbody tr td:hover{
+      opacity: 1;
+}
+/* index END */
+
+/* contact START */
+.title-contact{
+      font-size: 30px;
+      text-align: center;
+      margin: 20px 0;
+      color: white;
+      animation: atasKeBawah 1.5s ease-in;
+}
+form{
+      width: 80vw;
+      height: 400px;
+      padding: 20px;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+      margin: auto;
+      animation: bawahKeAtas 1.5s ease-in;
+}
+label{
+      font: 20px;
+      font-weight: bold;
+      color: #eaeaea;
+}
+input,
+textarea{
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      outline-color: pink;
+      border: none;
+      border-radius: 2px;
+      width: 100%;
+}
+button{
+      padding: 8px 22px;
+      border-radius: 5px;
+      border: none;
+      font-size: 15px;
+      color: black;
+      background-color: pink;
+      transition: 0.5s ease;
+      animation: bawahKeAtas 1s ease-in;
+}
+button:hover{
+      background-color: white;
+      color: pink;
+}
+/* contact END */
+
+/* aboutMe START */
+.aboutMe{
+      text-align: center;
+}
+.title-aboutMe{
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      margin: 10px 0 20px 0;
+      animation: atasKeBawah 1.5s ease-in;
+}
+.deskripsi-aboutMe{
+      color: #eaeaea;
+      padding: 0 10px;
+      opacity: .8;
+      font-size: 15px;
+      animation: atasKeBawah 1s ease-in;
+}
+video{
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 635px;
+      height: 349px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
+      animation: bawahKeAtas 1s ease-in;
+}
+/* aboutMe END */
+
+/* animasi */
+@keyframes animasi1 {
+      0%{
+            top: 0;
+            left: 0;
+      }
+      25%{
+            top: 0;
+            left: 30vw;
+      }
+      50%{
+            top: 50vh;
+            left: 30vw;
+      }
+      75%{
+            top: 50vh;
+            left: 0;
+      }
+      100%{
+            top: 0;
+            left: 0;
+      }
+}
+@keyframes animasi2 {
+      0%{
+            bottom: 0;
+            right: 0;
+      }
+      25%{
+            bottom: 50vh;
+            right: 0;
+      }
+      50%{
+            bottom: 50vh;
+            right: 30vw;
+      }
+      75%{
+            bottom: 0;
+            right: 30vw;
+      }
+      100%{
+            bottom: 0;
+            right: 0;
+      }
+}
+@keyframes atasKeBawah {
+      0%{
+            transform: translateY(-100%);
+            opacity: 0;
+      }
+      100%{
+            transform: translateY(0%);
+            opacity: 1;
+      }
+}
+@keyframes bawahKeAtas {
+      0%{
+            transform: translateY(100%);
+            opacity: 0;
+      }
+      100%{
+            transform: translateY(0%);
+            opacity: 1;
+      }
+}
+@keyframes kananKeKiri {
+      0%{
+            transform: translateX(100%);
+            opacity: 0;
+      }
+      100%{
+            transform: translateX(0%);
+            opacity: 1;
+      }
+}
+@keyframes kiriKeKanan {
+      0%{
+            transform: translateX(-100%);
+            opacity: 0;
+      }
+      100%{
+            transform: translateX(0%);
+            opacity: 1;
+      }
+}
+/* animasi end */
+
+/* responsive */
+@media screen and (max-width:800px) {
+      video{
+            width: 310px;
+            height: 174px;
+      }
+      #index::after,
+      #contact::after,
+      #aboutMe::after{
+            width: 100px;
+            height: 100px;
+      }
+      #index::before,
+      #contact::before,
+      #aboutMe::before{
+            width: 100px;
+            height: 100px;
+      }
+}
+@media screen and (max-width:567px) {
+      nav a,
+      .deskripsi-aboutMe,
+      .deskripsi-overview,
+      tbody tr td{
+            font-size: 10px;
+      }
+}
+/* responsive end */
